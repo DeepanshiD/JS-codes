@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+    <head>
+     
+    </head>
+    <style>
+    p{
+        visibility: hidden;
+    }
+    </style>
+
+    <body>
+        <ul>
+            <li>
+                <h1>I AM FIRST</h1>
+                <p>
+                    Being first is nice.
+                </p>
+            </li>
+            <li>
+            <h2>HEY THERE!.I AM NOT CLICKED</h2>
+            <p>
+                    Being second is nice.
+                </p>
+            </li>
+            <li>
+             <h3>HEY THERE!.I AM NOT CLICKED</h3>
+             <p>
+                    Being third is nice.
+                </p>
+            </li>
+        </ul>
+    </body>
+    <script>
+           
+            var h1=document.querySelector("h1");
+            h1.addEventListener("click",function(){
+               
+                p[0].style.visibility="visible";
+            })
+
+            var h2=document.querySelector("h2");
+            h2.addEventListener("click",function(){
+                p[1].style.visibility="visible";
+            })
+
+            var h3=document.querySelector("h3");
+            h3.addEventListener("click",function(){
+                p[2].style.visibility="visible";
+            })
+        </script>
+</html>

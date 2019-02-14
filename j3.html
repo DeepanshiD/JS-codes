@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            SCORE KEEPER GAME.
+        </title>
+    </head>
+    <body>
+        <h1><span id="P1">0</span> to <span id="P2">0</span></h1>
+        <p>
+            Playing to:<span id="D">5</span>
+        </p>
+       
+        <input type ="number">
+
+        <button id="p1">Player One</button>
+        <button id="p2">Player two</button>
+        <button id="reset">RESET</button>
+    </body>
+    <script>
+    var p1b=document.getElementById("p1");
+    var p2b=document.getElementById("p2");
+    var re=document.getElementById("reset");
+    var p1d=document.getElementById("P1");
+    var p2d=document.getElementById("P2");
+    var num=document.querySelector("input");
+    var wsd=document.getElementById("D");
+    var p1s=0;
+    var p2s=0;
+    var game=false;
+    var ws=5;
+p1b.addEventListener("click",function(){
+    
+    if(p2s>=ws|| p1s>=ws)
+    {
+        if(p2s>p1s)
+        p2d.style.color="green";
+        else
+        p1d.style.color="green";
+    }
+    else{
+    p1s++;
+    p1d.textContent=p1s;
+    if(p1s==ws)
+    p1d.style.color="green";
+   }
+
+});
+p2b.addEventListener("click",function(){
+  
+    if(p2s>=ws || p1s>=ws)
+    {
+        if(p2s>p1s)
+        p2d.style.color="green";
+        else
+        p1d.style.color="green";
+    }
+    else{
+        p2s++;
+    p2d.textContent=p2s;
+    if(p2s==ws)
+    p2d.style.color="green";
+    }
+
+});
+num.addEventListener("change",function(){
+    wsd.textContent=num.value;
+    ws=Number(num.value);
+});
+re.addEventListener("click",function(){
+    p1d.style.color="black";
+    p2d.style.color="black";
+    p2d.textContent=0;
+    p1d.textContent=0;
+    p2s=0;
+    p1s=0;
+
+
+});
+    </script>
+</html>

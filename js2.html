@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>COLOUR TOGGLE</title>
+    </head>
+    <body>
+        <button>CLICK ME</button>
+    </body>
+    <script>
+        var b = document.querySelector("button");
+        var bol=false;
+        b.addEventListener("click",function(){
+          if(bol){
+            b.style.background="red";
+            bol=false;
+
+          }
+           
+          else{
+            b.style.background="green";
+            bol=true;
+
+          }
+            
+        });
+      
+    </script>
+
+</html>
